@@ -1,0 +1,29 @@
+{
+  "name": "Sort the Meet",
+  "description": "Show yourself in alphabetical order in participants list",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*"
+      ],
+      "js": [
+        "js/inject.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons": {
+    "16": "icons/sort16.png",
+    "48": "icons/sort48.png",
+    "128": "icons/sort128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/sort48.png"
+  },
+  "web_accessible_resources": [
+    "js/sort-users.js"
+  ],
+  "manifest_version": 2
+}
