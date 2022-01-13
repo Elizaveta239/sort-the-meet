@@ -1,6 +1,9 @@
 ;(function () {
     setInterval(() => {
-        const participants = document.querySelector('[class="GvcuGe"]');
+        let participants = document.querySelector('[aria-label="Participants"]')
+        if (participants == null) {
+            participants = document.querySelector('[class="GvcuGe"]');
+        }
         if (participants) {
             let items = participants.querySelectorAll('[role="listitem"]');
             let user_name = null;
