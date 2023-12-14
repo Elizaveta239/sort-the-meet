@@ -1,9 +1,6 @@
-;(function () {
+; (function () {
     setInterval(() => {
-        let participants = document.querySelector('[aria-label="Participants"]')
-        if (participants == null) {
-            participants = document.querySelector('[class="GvcuGe"]');
-        }
+        let participants = getParticipants(["Participants", "Deelnemers"]);
         if (participants) {
             let items = participants.querySelectorAll('[role="listitem"]');
             let user_name = null;
@@ -37,6 +34,24 @@
                     participants.insertBefore(participants.children[user_ind], participants.children[new_user_ind]);
                 }
             }
+        }
+
+        function getParticipants(possible_names) {
+            let participants = null;
+
+            // Try to find the participants list by its aria-label
+            for (let i = 0; i < possible_names.length; i++) {
+                participants = document.querySelector('[aria-label="' + possible_names[i] + '"]');
+                if (participants != null) {
+                    break;
+                }
+            }
+
+            // Fall back to the first element with class "GvcuGe" if no participants list is found
+            if (participants == null) {
+                participants = document.getElementsByClassName("GvcuGe")[0];
+            }
+            return participants;
         }
     }, 500)
 })()
