@@ -5,7 +5,7 @@ Show yourself in alphabetical order in participants list
 By default, when you open a list of participants in Google Meet, all the participants are shown in alphabetical order except of you. You're always shown on top of the list and it's hard to understand when is your turn to speak.
 Sort the Meet extension solves this problem and shows you not on top of the list, but in the correct alphabetical position.
 
-The extension can be installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/sort-the-meet/dokbaedihaiifdlfgbeillibkpngoikg)
+The extension can be installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/sort-the-meet/dokbaedihaiifdlfgbeillibkpngoikg) and from [Firefox Add-ons](https://addons.mozilla.org/nl/firefox/addon/sort-the-meet/)
 
 ![](screenshot.jpg)
 
