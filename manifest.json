@@ -19,11 +19,18 @@
     "48": "icons/sort48.png",
     "128": "icons/sort128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "icons/sort48.png"
   },
   "web_accessible_resources": [
-    "js/sort-users.js"
+    {
+      "resources": [
+        "js/sort-users.js"
+      ],
+      "matches": [
+        "https://meet.google.com/*"
+      ]
+    }
   ],
-  "manifest_version": 2
+  "manifest_version": 3
 }
